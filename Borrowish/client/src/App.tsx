@@ -26,6 +26,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <p> Welcome to Borrowish </p>
           <p>{this.state.response}</p>
         </header>
       </div>
