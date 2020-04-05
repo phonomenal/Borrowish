@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "install-client": "cd client && npm install",
+    "client-test": "cd client && npm test",
     "client": "cd client && npm start",
     "server": "nodemon server/server.ts",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
