@@ -19,3 +19,5 @@ app.post("/api/world", (req: any, res: any) => {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+export default app;
