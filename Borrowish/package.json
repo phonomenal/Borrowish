@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run build && node dist/server.js",
-    "build": "tsc",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "build-ts": "tsc",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run build-ts",
     "install-client": "npm install --prefix client",
     "client-test": "npm test --prefix client",
     "client": "npm start --prefix client",
