@@ -1,12 +1,23 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { Request, Response } from "express";
+import path from "path";
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve static assets if in prod env
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 app.get("/api/hello", (req: Request, res: Response) => {
   res.send({ express: "Hello From Node Js Service!" });
