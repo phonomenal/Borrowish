@@ -13,7 +13,7 @@ describe("Hello API request", () => {
       .get("/api/hello")
       .then((res) => {
         expect(res.status).to.eql(200);
-        expect(res.body.express).to.contain("Hello From Node Js Service");
+        expect(res.body.express).to.contain("We are automated now!");
       });
   });
 });
