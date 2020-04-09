@@ -1,13 +1,13 @@
 {
-  "name": "borrowish",
+  "name": "borrow-app",
   "version": "1.0.0",
   "scripts": {
     "start": "node dist/server.js",
     "build-ts": "tsc",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run build-ts",
-    "install-client": "npm install --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run client && npm run build-ts",
+    "install-client": "cd client && npm install",
     "client-test": "npm test --prefix client",
-    "client": "npm start --prefix client",
+    "client": "cd client && npm start client",
     "server": "nodemon server/server.ts",
     "server-test": "mocha -r ts-node/register test/**/*.ts --exit",
     "test-dev": "nodemon --watch . --ext ts --exec \"mocha -r ts-node/register test/**/*.test.ts\"",
