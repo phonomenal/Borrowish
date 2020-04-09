@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/api/hello", (req: Request, res: Response) => {
-  res.send({ express: "Hello From Node Js Service" });
+  res.send({ express: "Hello From Node Js Service!" });
 });
 
 app.post("/api/world", (req: Request, res: Response) => {
