@@ -16,6 +16,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Pathing to correct directory and install dependencies
       run: |
-        cd Borrowish
         npm install
         npm run server-test
