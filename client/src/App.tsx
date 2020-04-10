@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { MyForm } from "./MyForm";
 
 class App extends Component {
   state = {
@@ -30,8 +31,17 @@ class App extends Component {
           <p>{this.state.response}</p>
         </header>
       </div>
+      
     );
   }
+}
+
+const testApp = () => {
+  return (
+    <div style={{ textAlign: "center"}}>
+        <MyForm onSubmit={() => {}}    />
+    </div>
+    );
 }
 
 export default App;
